@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <header>
+    <a href="#" class="logo">FoodieFinds<span>.</span></a>
+    <div class="menuToggle" onclick="toggleMenu();"></div>
+    <ul class="navigation">
+      <li><a href="#banner" onclick="toggleMenu();">Home </a></li>
+      <li><a href="#about" onclick="toggleMenu();">About </a></li>
+      <li><a href="#menu" onclick="toggleMenu();">Dishes</a></li>
+      <li><a href="#expert" onclick="toggleMenu();">Countries </a></li>
+      <li><a href="#testimonials" onclick="toggleMenu();">Recipes</a></li>
+      <li class="conta"><a href="#contact" onclick="toggleMenu();">Send </a></li>
+    </ul>
+  </header>
+  <section class="banner" id="banner">
+    <div class="content">
+      <h2> Taste The Colours</h2>
+      <p> Authentic foods wherever you are</p>
+      <a href="#" class="btn"> Popular Dishes</a>
+    </div>
+  </section>
+  <section class="about" id="about">
+    <div class="row">
+      <div class="co150">
+        <h2 class="titleText"><span>A</span>bout Us</h2>
+        <p>FoodieFoods is a company dedicated to help international students and all migrants. It shows you the best and
+          most affordable grocery stores for your chosen countries. Additionally, you have the opportunity to post
+          authentic recipes from your countries using ingredients from shops in your city.
+          <br><br>
+        </p>
+      </div>
+      <div class="co150">
+        <div class="imgBx">
+          <img
+            src="https://images.pexels.com/photos/2474658/pexels-photo-2474658.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="menu" id="menu">
+    <div class="title">
+      <h2 class="titleText">Our <span>D</span>ishes</h2>
+      <p> These are just some of our most popular dishes.</p>
+    </div>
+    <div class="content">
+      <div class="box">
+        <div class="imgBx">
+          <img src="images/keralachickencurrybowltop.jpg">
+        </div>
+        <div class="text">
+          <h3> Keralan Curry</h3>
+        </div>
+      </div>
+      <div class="box">
+        <div class="imgBx">
+          <img src="th.jpeg">
+        </div>
+        <div class="text">
+          <h3> Fried Rice</h3>
+        </div>
+      </div>
+      <div class="box">
+        <div class="imgBx">
+          <img
+            src="https://images.pexels.com/photos/5560763/pexels-photo-5560763.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+        </div>
+        <div class="text">
+          <h3> Dosa</h3>
+        </div>
+      </div>
+      <div class="box">
+        <div class="imgBx">
+          <img
+            src="https://images.pexels.com/photos/1260968/pexels-photo-1260968.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+        </div>
+        <div class="text">
+          <h3> Pizza</h3>
+        </div>
+      </div>
+      <div class="box">
+        <div class="imgBx">
+          <img
+            src="https://images.pexels.com/photos/1437267/pexels-photo-1437267.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+        </div>
+        <div class="text">
+          <h3> Pasta</h3>
+        </div>
+      </div>
+      <div class="box">
+        <div class="imgBx">
+          <img
+            src="https://images.pexels.com/photos/2347311/pexels-photo-2347311.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+        </div>
+        <div class="text">
+          <h3> Chowmein</h3>
+        </div>
+      </div>
+      <div class="box">
+        <div class="imgBx">
+          <img
+            src="https://images.pexels.com/photos/4449068/pexels-photo-4449068.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+        </div>
+        <div class="text">
+          <h3> Samosa</h3>
+        </div>
+      </div>
+      <div class="box">
+        <div class="imgBx">
+          <img src="images/1200x600-Biryani.webp">
+        </div>
+        <div class="text">
+          <h3> Biriyani</h3>
+        </div>
+      </div>
+      <div class="box">
+        <div class="imgBx">
+          <img src="images/ramen.jpeg">
+        </div>
+        <div class="text">
+          <h3> Ramen</h3>
+        </div>
+      </div>
+      <div class="box">
+        <div class="imgBx">
+          <img src="download.webp">
+        </div>
+        <div class="text">
+          <h3> Jollof Rice</h3>
+        </div>
+      </div>
+    </div>
+    <div class="title">
+      <a href="#" class="btn">View all</a>
+    </div>
+
+  </section>
+  <section class="expert" id="expert">
+    <div class="title">
+      <h2 class="titleText"><span>C</span>ountries</h2>
+      <p>Explore different countries' cuisines with us!</p>
+      <label for="cars">Choose a Country:</label>
+
+      <select name="cars" id="cars">
+        <option value="japan">India</option>
+        <option value="india">Japan</option>
+        <option value="italy">Italy</option>
+        <option value="france">Nigeria </option>
+      </select>
+    </div>
+    <div class="content">
+      <h1>Available Stores in Your Area</h1>
+
+      <div id="googleMap" style="width:100%;height:400px;"></div>
+
+      <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOCorn1FpxUHVi3CaGhLp16HwoS9MypXA&callback=myMap"></script>
+
+      <div class="box">
+        <div class="imgBx">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipPx-oksOpMJZ5emXyqezD6hZdrqVLEyuttqQaxn=s1360-w1360-h1020">
+        </div>
+        <div class="text">
+          <h3> Yours Supermarket </h3>
+        </div>
+      </div>
+      <div class="box">
+        <div class="imgBx">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipOPUszDuA5b66hgDeoCJ3MfcT_bwSyRl4nTtr44=s1360-w1360-h1020">
+        </div>
+        <div class="text">
+          <h3> Falcon Cash& Carry </h3>
+        </div>
+      </div>
+      <div class="box">
+        <div class="imgBx">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipM-i2hDdZ-zOGgpbHOG-RN2WtI1Ln2BA-Csf8yg=s1360-w1360-h1020">
+        </div>
+        <div class="text">
+          <h3> Shiva Shakti Foods </h3>
+        </div>
+      </div>
+      <div class="box">
+        <div class="imgBx">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipO3a5oEQOg0TteAZM2_xAnqyL-ch_BbsGclru4O=s1360-w1360-h1020">
+        </div>
+        <div class="text">
+          <h3> Noor Grocery </h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials" id="testimonials">
+    <div class="title white">
+      <h2 class="titleText"><span>R</span>ecipes</h2>
+      <p> These are some of the recipes we from our users.</p>
+    </div>
+    <div class="content">
+      <div class="box">
+        <div class="imgBx">
+          <img src="IMG_0972.JPG">
+        </div>
+        <div class="text">
+          <p> Prepare a filling by mixing boiled and mashed potatoes with peas, onions, garlic, ginger, and spices.
+            Spoon the filling onto samosa wrappers or phyllo pastry sheets, fold them into triangles, and seal the
+            edges. Deep fry or bake the samosas until they're golden and crispy. Serve hot with chutney or sauce for a
+            delicious snack or appetizer.
+          </p>
+          <h3>Niena Nisanth</h3>
+        </div>
+      </div>
+      <div class="box">
+        <div class="imgBx ">
+          <img src="speaker1.jpg">
+        </div>
+        <div class="text">
+          <p>Heat oil in a large skillet or wok over medium-high heat. Add chopped vegetables (such as carrots, peas,
+            bell peppers) and cook until slightly softened. Stir in cooked rice and soy sauce, tossing to combine. Push
+            the rice to one side of the pan and crack an egg into the empty space, scrambling until cooked. Mix the egg
+            into the rice, season with salt and pepper to taste, and garnish with green onions or cilantro before
+            serving. Enjoy!
+          </p>
+          <h3>Gokul unni</h3>
+        </div>
+      </div>
+      <div class="box">
+        <div class="imgBx">
+          <img src="IMG_1034.JPG">
+        </div>
+        <div class="text">
+          <p>Preheat your oven to 475°F (245°C). Roll out store-bought or homemade pizza dough onto a baking sheet.
+            Spread pizza sauce over the dough, then add desired toppings such as cheese, pepperoni, vegetables, and
+            herbs. Bake in the preheated oven for 12-15 minutes, or until the crust is golden brown and the cheese is
+            melted and bubbly. Enjoy!
+
+          </p>
+          <h3>Chris Varughese</h3>
+        </div>
+        <div>
+        </div>
+
+  </section>
+  <section class="contact" id="contact">
+    <div class="title">
+      <h2 class="titleText"><b> <span>S</span>end Your Recipe</b></h2>
+      <p> .</p>
+    </div>
+    <div class="contactForm">
+      <h3>Suggest Recipe</h3>
+      <div class="inputBox">
+        <input type="text" placeholder="Name">
+      </div>
+      <div class="inputBox">
+        <input type="text" placeholder="Recipe Title">
+      </div>
+      <div class="inputBox">
+        <textarea placeholder="Your recipe..."></textarea>
+      </div>
+      <div>
+        <h4>Your Recipe's Image</h4>
+      </div>
+      <form action="/action_page.php">
+        <input class="inputBox" type="file" id="myFile" name="filename">
+      </form>
+      <div class="inputBox">
+        <input type="submit" value="Submit" onclick="Alert()">
+      </div>
+    </div>
+
+  </section>
+  </div>
+
+</body>
+
+</html>
